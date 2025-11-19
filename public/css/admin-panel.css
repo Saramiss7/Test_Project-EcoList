@@ -1,0 +1,58 @@
+/* Fondo general del panel */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Títulos */
+h2 {
+    color: #208939;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+h1{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Contenedor de tablas */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Encabezado de tablas */
+.table thead {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Botones de acciones */
+.action-btn {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white !important;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.accept {
+    background-color: #28a745;
+}
+
+.reject {
+    background-color: #dc3545;
+}
+
+/* Hover */
+.accept:hover {
+    background-color: #218838;
+}
+
+.reject:hover {
+    background-color: #bd2130;
+}

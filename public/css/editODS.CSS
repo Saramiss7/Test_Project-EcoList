@@ -1,0 +1,57 @@
+body {
+  background: linear-gradient(180deg, #e9f7ef 0%, #f8fdf9 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+main.container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  padding: 3rem 3rem 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+main.container:hover{
+  transform: tranlateY(-4px);
+}
+
+/*Title*/
+h2.title {
+  text-align: center;
+  font-weight: 700;
+  color: #198754;
+  margin-bottom: 0.5rem;
+}
+h5.subtitle{
+  text-align: center;
+  color: #5c5c5c;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/*Quill*/
+#editor {
+  height: 420px;
+  border-radius: 0px 0px 12px 12px;
+  border: 1.5px solid #d1d1d1;
+  background-color: #fcfcfc;
+  padding: 0.5rem;
+}
+
+/*Responsivness*/
+@media (max-width: 768px) {
+  main.container {
+    padding: 2rem 1.2rem;
+  }
+
+  #editor {
+    height: 300px;
+  }
+
+  .btnSave, .btnCancel {
+    width: 48%;
+  }
+}

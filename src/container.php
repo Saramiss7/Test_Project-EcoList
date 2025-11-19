@@ -1,0 +1,30 @@
+<?php
+class Container extends \Emeset\Container {
+
+    private $db;
+
+    public function __construct($config)
+    {
+        parent::__construct($config);
+        $this->db = $this->Db();
+    }
+
+    public function Producte(){
+    return new \Models\Producte($this->db);
+    }
+
+    public function Categoria(){
+    return new \Models\Categoria($this->db);
+    }
+
+    public function Db(){
+        return new \Models\Db(
+            $this->config["db"]["user"], 
+            $this->config["db"]["password"],
+            $this->config["db"]["dbname"],
+            $this->config["db"]["host"],
+            $this->config["db"]["port"]
+        );
+    }
+    
+}

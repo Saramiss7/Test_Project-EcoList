@@ -1,0 +1,31 @@
+body { 
+    background: #f2f8f2; 
+}
+.ranking-card { 
+    background: #fff; 
+    border-radius: 12px; 
+    padding: 24px; 
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06); 
+}
+.user-row.current { 
+    background: rgba(46,125,50,0.06); 
+}
+.profile-photo { 
+    max-width:30px; 
+    max-height:30px; 
+    object-fit:cover; 
+    border-radius:50%; 
+    border:2px solid #fff; 
+    box-shadow:0 1px 6px rgba(0,0,0,0.08); 
+}
+.rank-badge { 
+    font-weight:700; 
+    font-size:1rem; 
+    width:44px; 
+    height:44px; 
+    display:inline-flex;
+    align-items:center; 
+    justify-content:center; 
+    border-radius:10px; 
+    background:#e8f5e9; 
+}

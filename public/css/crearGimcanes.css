@@ -1,0 +1,225 @@
+body { font-family: 'Poppins', sans-serif; 
+  background: linear-gradient(135deg, #1c8f51, #0d6937); 
+  margin: 0; 
+  color: #333; 
+}
+
+nav{
+  border-bottom:3px solid white;
+}
+.containerGymkhana {
+  max-width: 1200px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+}
+
+.gim-title {
+  color: #0d6937;
+}
+
+.act-title {
+  color: #0d0d0d;
+}
+
+label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+input, textarea, select {
+  border-radius: 12px;
+  padding: 12px;
+  border: 1.5px solid #e6e6e6;
+  font-size: 15px;
+  background: #fafafa;
+  transition: all 0.25s;
+}
+
+textarea{
+  height: 100px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #198754 !important;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(25, 135, 84, 0.25);
+}
+
+input:hover, textarea:hover, select:hover {
+  border-color: #198754;
+  box-shadow: 
+      6px 0 12px -4px rgba(25, 135, 84, 0.35),
+      -6px 0 12px -4px rgba(25, 135, 84, 0.35);
+}
+
+.gymkhana-preview {
+  width: 100%;
+  max-height: 300px;
+  object-fit:contain;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.activity {
+  background: #fefefe;
+  border: 2px solid #befac5;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+.questionType{
+  display:none;
+}
+
+.btn {
+  border-radius: 14px;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+.btn-success {
+  background: #198754;
+  border: none;
+}
+.btn-success:hover {
+  background: #157347;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(21, 115, 71, 0.4);
+}
+.btn-danger:hover {
+  transform: translateY(-2px);
+}
+
+#gymkhanaMap, .activityMap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #3d845e;
+}
+
+#gymkhanaMap{
+  height: 200px;
+}
+
+/*Delete button*/
+.deleteBtn1 {
+  position: relative;
+  border-radius: 6px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cc0000;
+  background-color: #e50000;
+  overflow: hidden;
+}
+
+.deleteBtn1,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.deleteBtn1 .button__text {
+  transform: translateX(35px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.deleteBtn1 .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn1 .svg {
+  width: 20px;
+}
+
+.deleteBtn1:hover {
+  background: #cc0000;
+}
+
+.deleteBtn1:hover .button__text {
+  color: transparent;
+}
+
+.deleteBtn1:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.deleteBtn1:active .button__icon {
+  background-color: #b20000;
+}
+
+.deleteBtn1:active {
+  border: 1px solid #b20000;
+}
+ 
+/*Uploads*/
+.file-input-hidden {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.btn.add{
+  background-color: #28a745 !important;
+  color:white;
+}
+.btn.add:hover{
+  color:white;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.8);
+}
+
+.btn-custom-upload {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+  transition: all 0.3s ease;
+  
+  display: block; 
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-custom-upload:hover {
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.8);
+  transform: translateY(-2px); 
+}
+
+.btn-custom-upload:active {
+  background-color: #218838;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.icon{
+  height:20px;
+}
