@@ -1,7 +1,5 @@
 <?php
-
 function ctrlLlistat($request, $response, $container) {
-
     //Get llistat
     $prodModel = $container->Producte();
     $productes = $prodModel->getProductes();
@@ -12,4 +10,3 @@ function ctrlLlistat($request, $response, $container) {
 
     return $response;
 }
-

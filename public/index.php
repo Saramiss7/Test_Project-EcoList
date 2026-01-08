@@ -16,8 +16,7 @@ include "../src/Models/Producte.php";
 include "../src/Models/Categoria.php";
 
 /* 5. Middlewares */
-include "../src/middleware/login.php";
-include "../src/middleware/is_admin.php";
+
 
 /* 6. Controllers */
 include "../src/controllers/ctrlIndex.php";

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrearGimcana</title>
+    <title>Crear Producte</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/crearGimcanes.css">
+    <link rel="stylesheet" href="./css/crear.css">
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,35 +21,35 @@
 <body>
     <?php include "navbar.php"; ?>
 
-    <div class="containerGymkhana justify-content-center mt-3  col-12">
-        <h1 class="text-center title">Formulari</h1>
+    <div class="containerC justify-content-center mt-5 mb-5 col-12">
+        <h1 class="text-center title mt-4">Formulari</h1>
         <form class="createGim" id="formGimcana" action="index.php" method="POST">
             <input type="hidden" name="r" value="doInsertForm">
 
-            <!--Gymkahna information-->
-            <div class="row gap-5 justify-content-center">
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 col-md-8 questions">
 
-                <!--General information-->
-                <div class="col-md-7 justify-content-center mt-5 rightColumn">
                     <div class="mb-3">
                         <label for="nom_producte" class="form-label">Nom producte</label>
                         <input type="text" class="form-control" id="nom_producte" name="nom_producte"
                             placeholder="Producte ..." required>
                     </div>
 
-                    <label>Selecciona el tipus de categoria</label>
-                    <select name="categoria" class="form-control mb-3" required>
-                        <option value="1">Alimentació sostenible</option>
-                        <option value="2">Higiene eco</option>
-                        <option value="3">Llar eficient</option>
-                        <option value="4">Tecnologia responsable</option>
-                        <option value="5">Moda sostenible</option>
-                        <option value="6">Mobilitat verda</option>
-                        <option value="7">Reduir/Reutilitzar</option>
-                        <option value="8">Compostatge i jardí</option>
-                        <option value="9">Energia renovable</option>
-                        <option value="10">Altres</option>
-                    </select>
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Selecciona el tipus de categoria</label>
+                        <select id="categoria" name="categoria" class="form-control" required>
+                            <option value="1">Alimentació sostenible</option>
+                            <option value="2">Higiene eco</option>
+                            <option value="3">Llar eficient</option>
+                            <option value="4">Tecnologia responsable</option>
+                            <option value="5">Moda sostenible</option>
+                            <option value="6">Mobilitat verda</option>
+                            <option value="7">Reduir/Reutilitzar</option>
+                            <option value="8">Compostatge i jardí</option>
+                            <option value="9">Energia renovable</option>
+                            <option value="10">Altres</option>
+                        </select>
+                    </div>
 
                     <div class="mb-3">
                         <label for="descripcio_curta" class="form-label">Descripció curta sobre el producte</label>
@@ -76,18 +76,18 @@
                     </div>
 
                     <!-- Buttons -->
-                    <div class="buttons">
-                        <div class="d-flex gap-3 mt-3 flex-wrap ">
+                    <div class="buttons mb-4">
+                        <div class="d-flex gap-3 mt-3 flex-wrap">
                             <a href="index.php" class="btn btn-danger flex-grow-1 text-white text-decoration-none">Cancel·la</a>
                             <button type="submit" class="btn btn-success flex-grow-1">Enviar</button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </form>
     </div>
 
-    <script src="./js/crearGimcanes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <footer><?php include "footer.php"; ?></footer>

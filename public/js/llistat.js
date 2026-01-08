@@ -1,67 +1,66 @@
-// --- DOM Elements ---
-const b_startGame = document.getElementById("sorteig");
-const bombo = [];
-const num_productor = null;
-const num = null;
+//productors es un array que conté tots els noms de productoras que hi han en la recerca
+console.log(productors);
+const lotteryButton = document.getElementById("sorteig");
 
-function getNom(){
-    const nomsProductors = new Set();
-    productors.forEach(p => {
-        const name = p.nom_productor;
-    })
-    return Array.from(nomsProductors);
+function extreureNomRandom() {
+    const posicio = Math.floor(Math.random() * productors.length);
+    const nom = productors[posicio];
+    productors.splice(posicio, 1);
+    return nom;
 }
 
-// Get a random number
-function Bombo() {
-    for (let i = 1; i <= numProductes; i++) bombo.push(i);
-    console.log(bombo);
-}
+function showNotification(name, position) {
+    return new Promise((resolve) => {
+        const noti = document.getElementById("notification");
+        const box = document.getElementById("notification-box");
+        const text = document.getElementById("notification-text");
 
-function extreureNum() {
-    const posicio = Math.floor(Math.random() * bombo.length);
-    const num = bombo[posicio];
-    bombo.splice(posicio, 1);
-    return num;
-}
-
-document.addEventListener("DOMContentLoaded", async () => {
-    echo = num;
-    b_startGame.addEventListener("click", () => {
-        if(numProductes < 3){
-            showNotification("Hi han massa pocs productes");
+        if (!noti || !box || !text) {
+            resolve();
             return;
-        }else if(numProductes >= 3){
-            Bombo();
-            extreureNum();
-            for(let i=0;i<=numProductes;i++){
-                if(productors[id_productor] == num){
-                    showNotification("Es tercer:" + productors);
-                }
-            }
-            showNotification(num + "Hi han varis");
         }
+
+        if(position == 0){
+            text.textContent = "3r premi: " + name;
+        }else if(position == 1){
+            text.textContent = "2n premi: " + name;
+        }else if(position == 2){
+            text.textContent = "1r premi: " + name;
+        }else{
+            text.textContent = name;
+        }
+
+        // Show notification
+        noti.style.display = "flex";
+        box.style.opacity = "1";
+
+        setTimeout(() => {
+            box.style.opacity = "0";
+            setTimeout(() => {
+                noti.style.display = "none";
+                resolve();
+            }, 1000);
+        }, 10000);
+    });
+}
+
+async function showWinner(count=3) {
+    lotteryButton.disabled = true;
+
+    for (let i = 0; i < count; i++) {
+        const name = extreureNomRandom();
+        await showNotification(name, i); // Wait for each notification to finish
+    }
+
+    lotteryButton.disabled = false;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    lotteryButton.addEventListener("click", ()=> {
+        if (productors.length < 3){
+            showNotification("Hi han massa pocs productes", -1);
+            return;
+        }
+        showWinner(3);
     });
 });
-
-function showNotification(message) {
-    pausaNotificacion = true;
-    const noti = document.getElementById("notification");
-    const box = document.getElementById("notification-box");
-    const text = document.getElementById("notification-text");
-
-    if (!noti ||!box || !text) return;
-
-    text.textContent = message;
-
-    noti.style.display = "flex";
-    box.style.opacity = "1";
-
-    setTimeout(() => {
-        box.style.opacity = "0";
-        setTimeout(() => {
-            noti.style.display = "none";
-        }, 300);
-        pausaNotificacion = false;
-    }, 2000);
-}

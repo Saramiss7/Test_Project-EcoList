@@ -22,43 +22,55 @@ $showErrorToast = isset($_GET['error']) && $_GET['error'] == 1; ?>
 <body>
   <?php include "navbar.php"; ?>
   
-<div class="container my-5">
-<!--Infopage-->
-  <div class="row align-items-center first">
-    <div class="col-12 col-md-6 text-center text-md-start">
-        <h1>EcoList</h1>
-    </div>
-  </div>
+  <div class="container my-5">
+  <!--Infopage-->
 
-  <!--Modal-->
-  <div id="custom-modal" class="custom-modal-container"> 
-        <div class="custom-modal-content"> 
-          <span class="close">&times;</span>
-          <div class="modal_text"> 
-            <h3 id="modal_title" class="text-center fw-600 mt-10 mb-5">Benvingut a EcoLlist!</h3>
-            <p id="modal_info" class="text-center">
-              La cooperativa VilaCendrassos ha decidit crear una aplicació web per centralitzar tots els productes ecològics que ofereixen els seus socis i col·laboradors. 
-              Fins ara, cada botiga o taller gestionava el seu propi catàleg, però ara volen tenir una plataforma comuna on tothom pugui introduir els seus productes i 
-              consultar un llistat general amb tota l’oferta eco del territori.
-            </p>
-          </div> 
+    <!--Modal de benvinguda-->
+    <div id="custom-modal" class="custom-modal-container"> 
+      <div class="custom-modal-content"> 
+        <span class="close">&times;</span>
+        <div class="modal_text"> 
+          <h2 id="modal_title" class="text-center fw-600 mt-10 mb-5 text-white">Benvingut a EcoLlist!</h2>
+          <p id="modal_info" class="text-justify-center">
+            La cooperativa VilaCendrassos ha decidit crear una aplicació web per centralitzar tots els productes ecològics que ofereixen els seus socis i col·laboradors. 
+            Fins ara, cada botiga o taller gestionava el seu propi catàleg, però ara volen tenir una plataforma comuna on tothom pugui introduir els seus productes i 
+            consultar un llistat general amb tota l’oferta eco del territori.
+          </p>
         </div> 
       </div>
     </div>
 
-  <button id="ranking" class="btn btn-success mt-4 mb-4"><a href="index.php?r=form" class="nav-link">Formulari</a></button>
-  <button id="ranking" class="btn btn-success mt-4 mb-4"><a href="index.php?r=llistat" class="nav-link">Veure llistat</a></button>
+    <section class="hero container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h1 class="hero-title">EcoList</h1>
+            <p id="hero-subtitle" class="mt-3">
+              La cooperativa VilaCendrassos ha decidit crear una aplicació web per centralitzar tots els productes ecològics que ofereixen els seus socis i col·laboradors. 
+              Fins ara, cada botiga o taller gestionava el seu propi catàleg, però ara volen tenir una plataforma comuna on tothom pugui introduir els seus productes i 
+              consultar un llistat general amb tota l’oferta eco del territori.
+            </p>
+        </div>
+
+        <div class="d-flex gap-3 mt-4">
+          <a href="index.php?r=form" class="btn I btn-eco-primary">Crear un producte</a>
+          <a href="index.php?r=llistat" class="btn I btn-eco-outline">Veure productes</a>
+        </div>
+      </div>
+
+      <div class="col-md-5 text-center d-none d-md-block">
+      </div>
+    </section>
 
     <!-- Toast container -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
       <div id="successToast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
-          <strong class="me-auto">ODS actualitzat</strong>
+          <strong class="me-auto">EcoLlist</strong>
           <small>Ara mateix</small>
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
-          Canvis desats correctament.
+          Producte creat correctament.
         </div>
       </div>
 
@@ -69,7 +81,7 @@ $showErrorToast = isset($_GET['error']) && $_GET['error'] == 1; ?>
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
-          Hi ha hagut un error en desar els canvis.
+          Hi ha hagut un error a l'hora de crear el producte.
         </div>
       </div>
     </div>

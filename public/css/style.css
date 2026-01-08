@@ -1,46 +1,21 @@
+:root {
+  --bg-main: #0f1512;        /* fondo principal */
+  --bg-card: #161f1a;        /* cards / modales */
+  --green-main: #1f8f4a;     /* verde principal */
+  --green-soft: #2ecc71;    /* hover / highlights */
+  --text-main: #e6e6e6;
+  --text-muted: #9ca3af;
+  --border-soft: #243028;
+}
+body {
+  min-height: 100vh;
+}
+
 /*NAVIGATION BAR*/
-.navbar-nav{
-  margin: 0 auto;
-}
-
 .navbar-brand{
-  display:flex;
-  align-items: center;
   font-size: 2rem;
-  color: white !important;
-}
-
-.navbar-brand img {
-  margin-right: 10px;
-}
-
-.navbar-nav .nav-link {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: white !important;
-}
-
-/*FOOTER*/
-footer ul.border-bottom {
-  width: 40%;
-  margin: 0 auto;
-}
-
-/*PROFILE PICTURE*/
-.containerPfp img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.navbar-nav .nav-link {
-  font-size: 1rem;
-}
-
-.admin-nav .nav-link {
-  font-size: 0.95rem !important;
+  font-weight: 700;
+  gap: 30px;
 }
 
 @media (max-width: 992px) {
@@ -49,16 +24,17 @@ footer ul.border-bottom {
   }
 }
 
-.containerPfp {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 10px;
+/*FOOTER*/
+.nav-item, .footer-link{
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  gap: 30px;
 }
 
-.activityMap{
-  height: 300px; 
-  border: 1px solid #ccc; 
-  margin-top: 10px;
+.footer {
+  width: 100%;
+  margin: 0 auto;
 }
 
 /*Buttons*/
@@ -99,27 +75,15 @@ footer ul.border-bottom {
     color: #333;
 }
 
-/*Quill Editor*/
-.ql-editor h1 { font-size: 1.2rem; }
-.ql-editor h2 { font-size: 1.1rem; }
-.ql-editor h3 { font-size: 0.8rem; }
-.ql-editor h4 { font-size: 0.8rem; }
-.ql-editor h5 { font-size: 0.6rem; }
-
-.ql-lineheight .ql-picker-label::before,
-.ql-lineheight .ql-picker-item::before {
-  content: attr(data-value);
-}
-
 /*TOAST*/
 .toast-header{
   background-color: #157347 !important;
   color: white !important; 
 }
 
-.toast-body{
-  background-color: #ffffff86;
-  color:black;
+.toast-body {
+  background-color: #198754;
+  color: white;
 }
 
 /*Delete Button*/
@@ -182,4 +146,80 @@ footer ul.border-bottom {
 .userOptionsBtn{
   text-decoration: none;
   color:white;
+}
+
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #157347;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgb(32, 32, 32);
+  max-width: 520px;
+}
+
+.btn-eco-primary {
+  background-color: #243028;
+  color: white;
+  border-radius: 12px;
+  padding: 0.75rem 1.8rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-eco-primary:hover {
+  background-color: #2ecc71;
+  transform: translateY(-2px);
+}
+
+.btn-eco-outline {
+  border: 1px solid #243028;
+  color: #e6e6e6;
+  border-radius: 12px;
+  padding: 0.75rem 1.8rem;
+  background-color: transparent;
+}
+
+.btn-eco-outline:hover {
+  border-color: #1f8f4a;
+  color: #2ecc71;
+}
+
+.custom-modal-content {
+  background-color: #5c157300;
+  border-radius: 16px;
+  color: #e6e6e6;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  padding: 40px;
+  width: 55%;
+  height: auto;
+  border: 1px solid #243028;
+}
+
+#modal_title {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.custom-modal-content .close {
+  color: #9ca3af;
+}
+
+.custom-modal-content .close:hover {
+  color: white;
+}
+
+a.btn{
+  color: white;
+}
+a.btn.I{
+  background-color: #157347;
 }
